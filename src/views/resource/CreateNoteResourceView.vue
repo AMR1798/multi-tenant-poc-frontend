@@ -51,7 +51,8 @@
 </template>
 <script setup lang="ts">
 import { Delta, Quill, QuillEditor } from '@vueup/vue-quill'
-import BlotFormatter from 'quill-blot-formatter'
+// @ts-ignore
+import BlotFormatter from 'quill-blot-formatter/dist/BlotFormatter'
 import '@vueup/vue-quill/dist/vue-quill.snow.css';
 import { Form, Field, ErrorMessage } from 'vee-validate';
 import { ref } from 'vue';

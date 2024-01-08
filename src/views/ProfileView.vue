@@ -89,7 +89,7 @@ import SpeedDial from 'primevue/speeddial';
 import { useAuthStore } from '@/stores/auth';
 import { onMounted, reactive, ref } from 'vue';
 import ApiService from '@/services/ApiService';
-import { type PaginatedData } from '@/types/paginated-data';
+import type { PaginatedData } from '@/types/paginated-data';
 import { useTenantStore } from '@/stores/tenant';
 import type GetQuery from '@/types/get-query.interface';
 import type { PaginationParams } from '@/types/pagination-params';

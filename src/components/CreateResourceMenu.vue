@@ -28,6 +28,11 @@ import { ref } from "vue";
 import Button from 'primevue/button';
 import Menu from 'primevue/menu';
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import { useAuthStore } from "@/stores/auth";
+import { useTenantStore } from "@/stores/tenant";
+
+const authStore = useAuthStore();
+const tenantStore = useTenantStore();
 
 const menu = ref();
 const items = ref([

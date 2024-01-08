@@ -52,7 +52,7 @@ import Vue3Datatable from '@bhplugin/vue3-datatable';
 import { useAuthStore } from '@/stores/auth';
 import { onMounted, reactive, ref } from 'vue';
 import ApiService from '@/services/ApiService';
-import { type PaginatedData } from '@/types/paginated-data';
+import type { PaginatedData } from '@/types/paginated-data';
 import { paginatedChange } from '@/utils/pagination';
 import CreateResourceMenu from '@/components/CreateResourceMenu.vue';
 import ResourceActionMenu from '@/components/ResourceActionMenu.vue';

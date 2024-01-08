@@ -35,7 +35,7 @@ import Multiselect from '@vueform/multiselect'
 import { computed, ref, defineExpose, type Ref, watch, onMounted } from 'vue';
 import { useElementVisibility, useIntersectionObserver } from '@vueuse/core'
 import ApiService from '@/services/ApiService';
-import { type PaginatedData } from '@/types/paginated-data';
+import type { PaginatedData } from '@/types/paginated-data';
 import { useAuthStore } from '@/stores/auth';
 const selectComponent = ref(null);
 const props = defineProps({
