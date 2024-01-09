@@ -109,8 +109,9 @@ export const useAuthStore = defineStore('auth', () => {
     }
   }
 
-  function getBearer(): string {
-    return `Bearer ${JwtService.getToken()}`;
+  function getBearer(): string | null {
+    const token = JwtService.getToken()
+    return token ? `Bearer ${token}` : null;
   }
 
   async function getMe(): Promise<User> {
