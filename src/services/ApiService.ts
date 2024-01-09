@@ -49,6 +49,7 @@ class ApiService {
   public static init(app: App<Element>, authStore: ReturnType<typeof useAuthStore>, tenantStore: ReturnType<typeof useTenantStore>) {
     ApiService.vueInstance = app;
     ApiService.vueInstance.use(VueAxios, axios);
+    // @ts-ignore
     ApiService.vueInstance.axios.defaults.baseURL = import.meta.env.VITE_APP_API_DOMAIN;
     ApiService.authStore = authStore;
     ApiService.tenantStore = tenantStore
@@ -60,9 +61,9 @@ class ApiService {
 
   public static getUrl() {
     if (this.tenantSlug) {
-      return `http://${this.tenantSlug}.${ApiService.vueInstance.axios.defaults.baseURL}`
+      return `//${this.tenantSlug}.${ApiService.vueInstance.axios.defaults.baseURL}`
     }
-    return `http://${ApiService.vueInstance.axios.defaults.baseURL}`
+    return `//${ApiService.vueInstance.axios.defaults.baseURL}`
   }
 
   /**

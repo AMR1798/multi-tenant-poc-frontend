@@ -55,6 +55,10 @@ export const useTenantStore = defineStore('tenant', () => {
     if (parts.length === (domainLength - 1) || parts[0] === 'www') {
       return undefined
     } else {
+      // @ts-ignore
+      if (parts[0] === import.meta.env.VITE_APP_SUBDOMAIN){
+        return undefined
+      }
       return parts[0]
     }
   }
