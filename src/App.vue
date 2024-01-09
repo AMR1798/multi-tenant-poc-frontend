@@ -30,11 +30,11 @@ onMounted(async () => {
 
 <template>
   <div></div>
-  <div v-if="loaded" class="flex flex-col h-screen bg-white dark:bg-neutral-900">
+  <div v-if="loaded" class="flex flex-col min-h-screen bg-white dark:bg-neutral-900">
     <Navbar v-if="!hideNav"/>
     <RouterView />
   </div>
-  <div v-else class="flex flex-col h-screen bg-white dark:bg-slate-900">
+  <div v-else class="flex flex-col min-h-screen bg-white dark:bg-slate-900">
 <LoadingPageSpinner></LoadingPageSpinner>
   </div>
 </template>
